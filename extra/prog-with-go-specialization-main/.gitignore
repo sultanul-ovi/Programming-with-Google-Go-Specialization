@@ -1,0 +1,8 @@
+*.log
+.idea/
+*.iml
+target/
+.run/
+
+# Vscode #
+.vscode/
