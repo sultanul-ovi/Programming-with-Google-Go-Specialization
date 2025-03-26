@@ -10,6 +10,6 @@ func main() {
 		fmt.Printf("Error: %s", err)
 	} else {
 		n := int64(f)
-		fmt.Printf("Truncated value is: %d", n)
+		fmt.Printf("Truncated value is: %d\n", n)
 	}
 }
