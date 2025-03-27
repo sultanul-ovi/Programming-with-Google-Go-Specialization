@@ -1,40 +1,63 @@
-/*
-Problem - Write a program which prompts the user to enter integers and stores the integers in a sorted slice. The program should be written as a loop.
-Before entering the loop, the program should create an empty integer slice of size (length) 3. During each pass through the loop,
-the program prompts the user to enter an integer to be added to the slice. The program adds the integer to the slice, sorts the slice,
-and prints the contents of the slice in sorted order. The slice must grow in size to accommodate any number of integers which the user decides to enter.
-The program should only quit (exiting the loop) when the user enters the character ‘X’ instead of an integer.
-*/
 package main
 
 import (
-	"bufio"
 	"fmt"
+	"log"
 	"os"
 	"sort"
 	"strconv"
-	"strings"
+)
+
+const (
+	ExitCode string = "X"
 )
 
 func main() {
-	arr := make([]int, 0, 3)
 	var input string
+	var initslice = make([]int, 3)
+	fmt.Printf("Initialized slice with Len: %v \n", len(initslice))
 	for {
-		fmt.Println("Input number below. Input x to stop.")
-		scanner := bufio.NewScanner(os.Stdin)
-		if scanner.Scan() {
-			input = scanner.Text()
-		}
-		if strings.EqualFold(input, "x") {
+		fmt.Println("\t-----------------------------------")
+		fmt.Printf("Current slice: %v\n", initslice)
+		fmt.Printf("Enter a number to add to slice ('X' to exit program):")
+		if c, err := fmt.Scanf("%s", &input); err != nil {
+			if c == 0 {
+				log.Println("[ERROR] Empty Input")
+				continue
+			}
+			log.Println(err)
 			break
 		}
-		in, err := strconv.Atoi(input)
-		if err != nil {
-			fmt.Println("err - converting input string. err is ", err)
-			continue
+		if input == ExitCode {
+			fmt.Println("Exiting program")
+			os.Exit(0)
+
 		}
-		arr = append(arr, in)
-		sort.Ints(arr)
-		fmt.Println("sorted slice is ", arr)
+		intValue, err := strconv.Atoi(input)
+		if err != nil {
+			fmt.Printf("[ERROR] Invalid Input: ->'%s'\n", input)
+			continue
+
+		}
+		i, found := Find(initslice, 0)
+		if !found {
+			initslice = append(initslice, intValue)
+		} else {
+			initslice[i] = intValue
+
+		}
+		sort.Ints(initslice)
+		fmt.Println(initslice)
+
 	}
+}
+
+func Find(slice []int, val int) (int, bool) {
+	for i, item := range slice {
+		if item == val {
+			return i, true
+
+		}
+	}
+	return -1, false
 }
