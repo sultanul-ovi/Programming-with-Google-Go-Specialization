@@ -5,70 +5,32 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
-	"strings"
 )
 
-// Person struct
-// type Person struct {
-// 	name    string
-// 	address string
-// }
+// Function to take user input
+func userInput(message string) string {
+	fmt.Println(message)
 
-// Person is a map with two keys "name" and "address"
-type Person map[string]string
-
-func trimTrailingCrLf(s string) string {
-	trimmed := s
-	if strings.HasSuffix(trimmed, "\n") {
-		trimmed = strings.TrimSuffix(trimmed, "\n")
+	var input string
+	scanner := bufio.NewScanner(os.Stdin)
+	if scanner.Scan() {
+		input = scanner.Text()
 	}
-	if strings.HasSuffix(trimmed, "\r") {
-		trimmed = strings.TrimSuffix(trimmed, "\r")
-	}
-
-	return trimmed
-}
-
-// Using buffer reader allows both name and address to contain SPACE characters.
-func inputPersonDetails() Person {
-	person := make(Person)
-	stdinReader := bufio.NewReader(os.Stdin)
-
-	for {
-		fmt.Print("Please enter the name:")
-		if name, err := stdinReader.ReadString('\n'); err != nil {
-			fmt.Println("\nError: ", err)
-		} else {
-			// person.name = trimTrailingCrLf(name)
-			person["name"] = trimTrailingCrLf(name)
-			break
-		}
-	}
-
-	for {
-		fmt.Print("Please enter the address:")
-		if address, err := stdinReader.ReadString('\n'); err != nil {
-			fmt.Println("\nError: ", err)
-		} else {
-			// person.address = trimTrailingCrLf(address)
-			person["address"] = trimTrailingCrLf(address)
-			break
-		}
-	}
-
-	return person
+	return input
 }
 
 func main() {
-	person := inputPersonDetails()
-	// fmt.Println("\nName:", person["name"], "\nAddress:", person["address"])
+	x := make(map[string]string)
 
-	// For pretty-printing use MarshalIndent:
-	// if data, err := json.MarshalIndent(person, "", "   "); err != nil {
+	fmt.Println("-------------------------------")
+	x["name"] = userInput("Enter a Name:")
+	x["address"] = userInput("Enter their address:")
 
-	if data, err := json.Marshal(person); err != nil {
-		fmt.Println("\nError in serializing to JSON: ", err)
-	} else {
-		fmt.Println("\nJSON:", string(data))
+	data, err := json.Marshal(x)
+	if err != nil {
+		fmt.Printf("Error while converting to JSON format: %s", err)
+		os.Exit(0)
 	}
+	fmt.Println("-------------------------------")
+	fmt.Printf("JSON object: %v", string(data))
 }
