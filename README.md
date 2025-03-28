@@ -7,7 +7,7 @@ Notes for Go Specialization From Coursera Offered By University of California, I
 
 This specialization introduces the Go programming language from Google and provides learners with an overview of Go's special features. Upon completing the three-course sequence, learners will have gained the knowledge and skills needed to create concise, efficient, and clean applications using Go.
 
-Course 01:
+Course 01: Getting Started with Go
 
 ![Certificate](Course_01_Getting_Started_with_Go/Course_01_certificate.jpg)
 
