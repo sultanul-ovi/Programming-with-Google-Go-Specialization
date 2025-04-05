@@ -54,4 +54,4 @@
 
 - typically only done by interpreters
   - when go code is compiled, garbage collection also gets compiled automatically
-    - this slows down execution but not much, and there's a lot of advantage of having this automatic garbage collection
+  - this slows down execution but not much, and there's a lot of advantage of having this automatic garbage collection
