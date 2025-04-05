@@ -1,4 +1,4 @@
-# 🚀 Programming with Google Go Specialization
+![Specialization Certificate](go.png)
 
 📚 _Notes & Certificates from the Coursera Specialization by University of California, Irvine_
 
