@@ -1,16 +1,8 @@
-<!--
-Written by Ovi
-2025-04-05
-Summary: Module 1 Overview of the Go Programming Course – introduces Go, setup, code organization, and variables.
--->
-
 # 🧭 Module 1 Overview – Getting Started with Go
-
-Welcome to the first module! In this section, we’ll focus on **four key topics** to get you started with the Go programming language.
 
 ---
 
-## 1️⃣ Why Learn Go?
+### 1️⃣ Why Learn Go?
 
 We begin by exploring:
 
@@ -18,22 +10,14 @@ We begin by exploring:
 - Why is Go worth learning over other programming languages?
 - What are the benefits of using Go in real-world software development?
 
-This part aims to **motivate** you and help you understand **why Go matters**.
-
----
-
-## 2️⃣ Setting Up Go
+### 2️⃣ Setting Up Go
 
 Next, we’ll help you:
 
 - **Install the Go environment** on your system.
 - **Compile your first Go program** to ensure everything is working.
 
-📌 This step is a **sanity check** before diving deeper into Go development.
-
----
-
-## 3️⃣ Understanding Code Organization in Go
+### 3️⃣ Understanding Code Organization in Go
 
 In this section, we’ll explain:
 
@@ -43,9 +27,7 @@ In this section, we’ll explain:
 
 🔁 Sharing and collaborating are key goals of Go. Since most real software is developed in teams, understanding packages and modularity is essential.
 
----
-
-## 4️⃣ Introduction to Variables
+### 4️⃣ Introduction to Variables
 
 Finally, we’ll begin working with the Go language directly:
 
@@ -53,9 +35,7 @@ Finally, we’ll begin working with the Go language directly:
 - Understand **scoping rules**.
 - See how Go resolves variable values based on **where they are defined and used**.
 
----
-
-## ✅ Summary
+### ✅ Summary
 
 By the end of Module 1, you will:
 
@@ -64,15 +44,7 @@ By the end of Module 1, you will:
 - Know how to **organize Go projects** using packages.
 - Begin using **variables and scopes** in Go.
 
-Let's get started with Go! 🚀
-
 ---
-
-<!--
-Written by Ovi
-2025-04-05
-Summary: This section explains how Go's design makes it ideal for modern software, with built-in concurrency, efficient memory management, and a balanced approach between performance and ease of development.
--->
 
 ## 💡 Why Go Stands Out
 
@@ -95,8 +67,6 @@ Go is not just fast or easy—it’s **engineered for productivity and scalabili
 - Microservices
 - Cloud-native applications
 
----
-
 ### 🧹 Simplified Object-Oriented Programming
 
 - Go supports a **lightweight form of object orientation**.
@@ -109,8 +79,6 @@ Go is not just fast or easy—it’s **engineered for productivity and scalabili
   - **Structs with methods** for encapsulation
 
 🟢 This keeps code **clean, readable, and maintainable**.
-
----
 
 ### 🛠 Developer-Centric Language
 
@@ -127,8 +95,6 @@ Go was designed by experienced engineers at Google who wanted to fix frustration
 - Simple syntax
 - Built-in tools like `go fmt`, `go run`, `go mod`
 - Excellent documentation practices
-
----
 
 ### 🧭 Conclusion: Why You Should Learn Go
 
@@ -471,9 +437,9 @@ A **type** defines:
 - Allocate the correct amount of memory
 - Select the proper machine-level instructions during compilation
 
-
 ---
-<!-- 
+
+<!--
 Written by Ovi
 2025-04-05
 Summary: Explanation of type declarations and variable initialization techniques in Go, including zero values and short variable declarations.
