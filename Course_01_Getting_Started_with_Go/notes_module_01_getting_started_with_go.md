@@ -270,11 +270,6 @@ If installed successfully, it should return the installed version number.
 
 ---
 
-<!--
-Written by Ovi
-2025-04-05
-Summary: Overview of the Go Tool, including importing packages and essential command-line utilities.
--->
 
 # 🧰 Go Tools
 
@@ -382,12 +377,6 @@ A **type** defines:
 - Select the proper machine-level instructions during compilation
 
 ---
-
-<!--
-Written by Ovi
-2025-04-05
-Summary: Explanation of type declarations and variable initialization techniques in Go, including zero values and short variable declarations.
--->
 
 # 🔢 Variable Initialization
 
