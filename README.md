@@ -1,4 +1,4 @@
-![Specialization Certificate](go.png)
+![Specialization Certificate](certificates/go.png)
 
 📚 _Notes & Certificates from the Coursera Specialization by University of California, Irvine_
 
