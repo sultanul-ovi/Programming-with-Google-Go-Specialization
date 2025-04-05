@@ -110,12 +110,6 @@ Go was designed by experienced engineers at Google who wanted to fix frustration
 
 ---
 
-<!--
-Written by Ovi
-2025-04-05
-Summary: Overview of Object-Oriented Programming concepts and how Go implements them using structs and methods.
--->
-
 # 🧱 Object-Oriented Programming in Go
 
 Object-Oriented Programming (OOP) is a method of structuring code to improve readability, modularity, and reusability. It’s based on the concept of **encapsulation**, grouping together related data and the functions that operate on that data.
@@ -127,8 +121,6 @@ Object-Oriented Programming (OOP) is a method of structuring code to improve rea
 - **Encapsulation**: Organize code by bundling data and associated functions.
 - **User-defined types**: Create types tailored to specific applications.
   - Example: An `int` has both **data** (the value) and **functions** (e.g., `+`, `-`, `*`, `/`, `%`).
-
----
 
 ## 🧮 Object Example – Geometry in 3D
 
@@ -148,8 +140,6 @@ Suppose you're building an application that performs 3D geometric calculations. 
   - The structure (data fields)
   - The behavior (methods)
 - **`Objects`** are instances of a class with actual values
-
----
 
 ## 🦫 Objects in Go
 
@@ -174,12 +164,6 @@ Go supports OOP concepts but with a simpler approach:
 
 ---
 
-<!--
-Written by Ovi
-2025-04-05
-Summary: Introduction to concurrency concepts, their importance, and Go's built-in support for concurrent programming.
--->
-
 # ⚙️ Concurrency
 
 Modern computing demands handling many tasks efficiently and simultaneously. This section explores the **limits of traditional performance scaling**, the role of **parallelism**, and how **Go simplifies concurrent programming**.
@@ -196,8 +180,6 @@ Modern computing demands handling many tasks efficiently and simultaneously. Thi
   - **Power and heat constraints** prevent further clock speed increases.
   - Chips generate too much heat at high frequencies—limits are reached.
 
----
-
 ## 🤝 Parallelism
 
 - While clock speeds have plateaued, the number of **cores per processor is increasing**.
@@ -208,8 +190,6 @@ Modern computing demands handling many tasks efficiently and simultaneously. Thi
 - When should **tasks start or stop**?
 - How should **tasks communicate**, especially if one depends on another?
 - Do tasks **conflict in memory**?
-
----
 
 ## 🧵 Concurrent Programming
 
@@ -226,8 +206,6 @@ Modern computing demands handling many tasks efficiently and simultaneously. Thi
 - Communication between tasks
 - Synchronization (e.g., one task must finish before another starts)
 
----
-
 ## 🚀 Concurrency in Go
 
 Go was designed from the ground up for concurrency:
@@ -241,12 +219,6 @@ Go was designed from the ground up for concurrency:
 ✅ **Go makes concurrent programming efficient, readable, and scalable**—ideal for today’s multicore processors.
 
 ---
-
-<!--
-Written by Ovi
-2025-04-05
-Summary: Step-by-step guide to downloading and installing the Go programming tools on your local machine.
--->
 
 # 🛠️ Installing Go (Golang)
 
@@ -262,8 +234,6 @@ This section walks you through how to download and install the **Go programming 
 
 > 💡 On the left side of the homepage, there is a yellow box where you can type in and run Go code directly in your browser. We won’t use that—our goal is to run Go **locally** on your machine.
 
----
-
 ## 📥 Step 2: Choose Your Platform
 
 Once you click **Download Go**, you’ll land on a download page with precompiled versions for:
@@ -276,8 +246,6 @@ You can also download the **source code** if you'd like to build Go from scratch
 
 > ⚠️ Building from source is possible (Go is open source), but not recommended for beginners—it's complex and unnecessary unless you're modifying the Go compiler itself.
 
----
-
 ## 🖥️ Step 3: Install Go (Example: Windows)
 
 - Run the downloaded **MSI installer**.
@@ -287,10 +255,6 @@ You can also download the **source code** if you'd like to build Go from scratch
   - Complete the installation.
 
 > 💡 If your antivirus software flags the file, approve it to proceed.
-
----
-
-## ✅ You’re Ready!
 
 After installation:
 
@@ -325,13 +289,9 @@ Summary: Overview of the Go Tool, including importing packages and essential com
   - **_GOROOT_**
   - **_GOPATH_**
 
----
-
 ## 🔧 Go Tool Overview
 
 - The Go Tool is a command-line utility used to **build, run, format, test, and manage Go source code**.
-
----
 
 ### 🛠 Common Go Tool Commands
 
@@ -355,16 +315,6 @@ Summary: Overview of the Go Tool, including importing packages and essential com
 
 ---
 
-✅ These commands will be foundational as you build and maintain Go applications.
-
----
-
-<!--
-Written by Ovi
-2025-04-05
-Summary: Overview of variable naming rules, declarations, and data types in Go.
--->
-
 # 🧮 Variables
 
 ---
@@ -379,8 +329,6 @@ To refer to values in a program, you need **names**—for variables, functions, 
 - Cannot use **Go reserved keywords** like:
   - **_if_**, **_case_**, **_package_**, etc.
 
----
-
 ## 📦 Variable Basics
 
 - A variable stores **data in memory**
@@ -389,8 +337,6 @@ To refer to values in a program, you need **names**—for variables, functions, 
   - A **type**
 - All variables must be **declared before use**
 - You can declare multiple variables of the same type on the same line
-
----
 
 ### 📝 Basic Declaration:
 
@@ -430,8 +376,6 @@ A **type** defines:
   - Search
   - Concatenation
 
----
-
 ✅ The compiler uses the variable's type to:
 
 - Allocate the correct amount of memory
@@ -461,8 +405,6 @@ Summary: Explanation of type declarations and variable initialization techniques
 
 Using aliases makes your code **semantically meaningful**—you understand the purpose of a variable from its type name.
 
----
-
 ## 🚀 Initializing Variables
 
 ### ✅ During Declaration
@@ -479,8 +421,6 @@ Using aliases makes your code **semantically meaningful**—you understand the p
   - `var x int`
   - `x = 100`
 
----
-
 ## 🟰 Zero Values
 
 If you declare a variable without initializing it, Go assigns a **default zero value**:
@@ -489,8 +429,6 @@ If you declare a variable without initializing it, Go assigns a **default zero v
 - `string` → `""` (empty string)
 
 This ensures all variables are always in a valid state, even before assignment.
-
----
 
 ## ⚡ Short Variable Declarations
 
