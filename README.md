@@ -22,6 +22,8 @@ This intermediate-level, three-course specialization introduces the **Go (Golang
 
 > Learn Go basics: data types, control structures, functions, and JSON handling.
 
+> I have added 50 practice tasks (with their solutions) relevant to this course. | [Course 01 Tasks](Course_01_Getting_Started_with_Go/course_01_tasks.md)
+
 <!-- ![Course 01 Certificate](certificates/Course_01_certificate.jpg) -->
 
 ---
