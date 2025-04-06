@@ -6,17 +6,13 @@
 
 ---
 
-## 📌 Specialization Overview
-
-This intermediate-level, three-course specialization introduces the **Go (Golang)** programming language developed by Google. The series builds a strong foundation in Go’s syntax, functions, methods, interfaces, and concurrency models — preparing learners to build efficient, clean, and high-performance applications.
-
-🎓 **[View the Specialization on Coursera »](https://www.coursera.org/specializations/google-golang)**
-
 ![Specialization Certificate](certificates/certificate.jpg)
 
 ---
 
-## 📘 Courses Breakdown
+## 📌 Specialization Overview | [Coursera](https://www.coursera.org/specializations/google-golang)
+
+This intermediate-level, three-course specialization introduces the **Go (Golang)** programming language developed by Google. The series builds a strong foundation in Go’s syntax, functions, methods, interfaces, and concurrency models — preparing learners to build efficient, clean, and high-performance applications.
 
 ### ✅ Course 1: Getting Started with Go | [Coursera](https://www.coursera.org/learn/golang-getting-started?specialization=google-golang) | [Assignments](Course_01_Getting_Started_with_Go) | [Certificate](certificates/Course_01_certificate.jpg)
 
@@ -33,11 +29,13 @@ This intermediate-level, three-course specialization introduces the **Go (Golang
 > Deep dive into Go’s object-oriented patterns: methods, interfaces, and class-like structures.
 
 > I have added 50 practice tasks (with their solutions) relevant to this course. | [Course 02 Tasks](Course_02_Functions_Methods_and_Interfaces_in_Go/course_02_tasks.md)
+
 <!-- ![Course 02 Certificate](certificates/Course_02_certificate.jpg) -->
 
 ---
 
 ### ✅ Course 3: Concurrency in Go | [Coursera](https://www.coursera.org/learn/golang-concurrency?specialization=google-golang) | [Assignments](Course_03_Concurrency_in_Go) | [Certificate](certificates/Course_03_certificate.jpg)
+
 > Master goroutines and channels to write concurrent programs in Go.
 
 > I have added 50 practice tasks (with their solutions) relevant to this course. | [Course 03 Tasks](Course_03_Concurrency_in_Go/course_03_tasks.md)
