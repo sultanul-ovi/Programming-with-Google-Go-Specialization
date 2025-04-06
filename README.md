@@ -10,7 +10,7 @@
 
 ---
 
-## 📌 Specialization Overview | [Coursera](https://www.coursera.org/specializations/google-golang)
+## 📌 [Specialization Overview](https://www.coursera.org/specializations/google-golang)
 
 This intermediate-level, three-course specialization introduces the **Go (Golang)** programming language developed by Google. The series builds a strong foundation in Go’s syntax, functions, methods, interfaces, and concurrency models — preparing learners to build efficient, clean, and high-performance applications.
 
