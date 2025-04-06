@@ -1,11 +1,10 @@
 The goal of this assignment is to create a routine that sorts a series of ten integers using the bubble sort algorithm. Click the "My Submission" tab to view specific instructions for this activity.
 
 # PROMPT
+
 Write a Bubble Sort program in Go. The program
-should prompt the user to type in a sequence of up to 10 integers. The program
-should print the integers out on one line, in sorted order, from least to
-greatest. Use your favorite search tool to find a description of how the bubble
-sort algorithm works.
+should prompt the user to type in a sequence of up to 10 integers. The program should print the integers out on one line, in sorted order, from least to
+greatest. Use your favorite search tool to find a description of how the bubble sort algorithm works.
 
 As part of this program, you should write a
 function called BubbleSort() which
