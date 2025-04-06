@@ -14,6 +14,10 @@
 
 This intermediate-level, three-course specialization introduces the **Go (Golang)** programming language developed by Google. The series builds a strong foundation in Go’s syntax, functions, methods, interfaces, and concurrency models — preparing learners to build efficient, clean, and high-performance applications.
 
+- 👨‍🏫 Instructor: Prof. Ian Harris (UC Irvine)
+- 📹 Course Format: Video lectures, quizzes, and peer-reviewed assignments
+- 🧑‍💻 Designed for learners with prior programming experience (C, Python, Java, etc.)
+
 ### ✅ Course 1: Getting Started with Go | [Coursera](https://www.coursera.org/learn/golang-getting-started?specialization=google-golang) | [Assignments](Course_01_Getting_Started_with_Go) | [Certificate](certificates/Course_01_certificate.jpg)
 
 > Learn Go basics: data types, control structures, functions, and JSON handling.
@@ -43,12 +47,6 @@ This intermediate-level, three-course specialization introduces the **Go (Golang
 <!-- ![Course 03 Certificate](certificates/Course_03_certificate.jpg) -->
 
 ---
-
-## 🧠 Key Highlights
-
-- 👨‍🏫 Instructor: Prof. Ian Harris (UC Irvine)
-- 📹 Course Format: Video lectures, quizzes, and peer-reviewed assignments
-- 🧑‍💻 Designed for learners with prior programming experience (C, Python, Java, etc.)
 
 ---
 
