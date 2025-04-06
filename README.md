@@ -38,9 +38,9 @@ This intermediate-level, three-course specialization introduces the **Go (Golang
 ---
 
 ### ✅ Course 3: Concurrency in Go | [Coursera](https://www.coursera.org/learn/golang-concurrency?specialization=google-golang) | [Assignments](Course_03_Concurrency_in_Go) | [Certificate](certificates/Course_03_certificate.jpg)
+> Master goroutines and channels to write concurrent programs in Go.
 
 > I have added 50 practice tasks (with their solutions) relevant to this course. | [Course 03 Tasks](Course_03_Concurrency_in_Go/course_03_tasks.md)
-> Master goroutines and channels to write concurrent programs in Go.
 
 <!-- ![Course 03 Certificate](certificates/Course_03_certificate.jpg) -->
 
