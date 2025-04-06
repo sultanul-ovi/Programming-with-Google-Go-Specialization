@@ -18,27 +18,27 @@ This intermediate-level, three-course specialization introduces the **Go (Golang
 
 ## 📘 Courses Breakdown
 
-### ✅ Course 1: Getting Started with Go
+### ✅ Course 1: Getting Started with Go | [Coursera](https://www.coursera.org/learn/golang-getting-started?specialization=google-golang) | [Assignments](Course_01_Getting_Started_with_Go) | [Certificate](certificates/Course_01_certificate.jpg)
 
 > Learn Go basics: data types, control structures, functions, and JSON handling.
 
-![Course 01 Certificate](certificates/Course_01_certificate.jpg)
+<!-- ![Course 01 Certificate](certificates/Course_01_certificate.jpg) -->
 
 ---
 
-### ✅ Course 2: Functions, Methods, and Interfaces in Go
+### ✅ Course 2: Functions, Methods, and Interfaces in Go | [Coursera](https://www.coursera.org/learn/golang-functions-methods?specialization=google-golang) | [Assignments](Course_02_Functions_Methods_and_Interfaces_in_Go) | [Certificate](certificates/Course_02_certificate.jpg)
 
 > Deep dive into Go’s object-oriented patterns: methods, interfaces, and class-like structures.
 
-![Course 02 Certificate](certificates/Course_02_certificate.jpg)
+<!-- ![Course 02 Certificate](certificates/Course_02_certificate.jpg) -->
 
 ---
 
-### ✅ Course 3: Concurrency in Go
+### ✅ Course 3: Concurrency in Go | [Coursera](https://www.coursera.org/learn/golang-concurrency?specialization=google-golang) | [Assignments](Course_03_Concurrency_in_Go) | [Certificate](certificates/Course_03_certificate.jpg)
 
 > Master goroutines and channels to write concurrent programs in Go.
 
-![Course 03 Certificate](certificates/Course_03_certificate.jpg)
+<!-- ![Course 03 Certificate](certificates/Course_03_certificate.jpg) -->
 
 ---
 
