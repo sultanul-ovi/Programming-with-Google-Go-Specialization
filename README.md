@@ -22,19 +22,11 @@ This intermediate-level, three-course specialization introduces the **Go (Golang
 
 > Learn Go basics: data types, control structures, functions, and JSON handling.
 
-> I have added 50 practice tasks (with their solutions) relevant to this course. | [Course 01 Tasks](Course_01_Getting_Started_with_Go/course_01_tasks.md)
-
-<!-- ![Course 01 Certificate](certificates/Course_01_certificate.jpg) -->
-
 ---
 
 ### ✅ [Course 2: Functions, Methods, and Interfaces in Go](https://www.coursera.org/learn/golang-functions-methods?specialization=google-golang) | [Assignments](Course_02_Functions_Methods_and_Interfaces_in_Go) | [Certificate](certificates/Course_02_certificate.jpg)
 
 > Deep dive into Go’s object-oriented patterns: methods, interfaces, and class-like structures.
-
-> I have added 50 practice tasks (with their solutions) relevant to this course. | [Course 02 Tasks](Course_02_Functions_Methods_and_Interfaces_in_Go/course_02_tasks.md)
-
-<!-- ![Course 02 Certificate](certificates/Course_02_certificate.jpg) -->
 
 ---
 
@@ -42,11 +34,13 @@ This intermediate-level, three-course specialization introduces the **Go (Golang
 
 > Master goroutines and channels to write concurrent programs in Go.
 
-> I have added 50 practice tasks (with their solutions) relevant to this course. | [Course 03 Tasks](Course_03_Concurrency_in_Go/course_03_tasks.md)
-
-<!-- ![Course 03 Certificate](certificates/Course_03_certificate.jpg) -->
-
 ---
+
+## 📝 Practice Problem Set
+
+> I have added 150 practice tasks (with their solutions) relevant to this specialization. | [Course 01 Tasks](Course_01_Getting_Started_with_Go/course_01_tasks.md) | [Course 02 Tasks](Course_02_Functions_Methods_and_Interfaces_in_Go/course_02_tasks.md) | [Course 03 Tasks](Course_03_Concurrency_in_Go/course_03_tasks.md)
+
+## 📚 Recommended Learning Resources
 
 ---
 
