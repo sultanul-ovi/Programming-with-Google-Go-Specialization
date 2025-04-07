@@ -351,7 +351,7 @@ var x int // Comment after a statement
 var x int
 ```
 
-### Printing is handled using the `fmt` package.
+### Printing is handled using the `fmt` package
 
 > Import the Package + Basic Printing
 
@@ -474,24 +474,22 @@ x := "Hi there"
 - Each character is stored as a **rune**
 - Enclosed in double quotes (`"`)
 
-### ✅ Summary
+### ✅ Notes on Data Types
 
 - Convert types explicitly using the `T(value)` format
 - Use `float32` or `float64` based on precision needs
 - UTF-8 strings allow representation of global characters
 - Strings in Go are immutable and stored as sequences of UTF-8 runes
 
----
+### Go Standard Library: String Packages
 
-# Go Standard Library: String Packages
+#### Unicode Package
 
-## ✨ Unicode Package
+> Go's `unicode` package provides functions to analyze and manipulate **runes** (Unicode characters).
 
-Go's `unicode` package provides functions to analyze and manipulate **runes** (Unicode characters).
+#### Rune Classification
 
-### 🔍 Rune Classification
-
-All functions return `true` or `false` based on the category of the rune:
+> All functions return `true` or `false` based on the category of the rune:
 
 ```go
 unicode.IsDigit(r)
@@ -508,15 +506,11 @@ unicode.ToUpper(r)
 unicode.ToLower(r)
 ```
 
-Convert a rune to uppercase or lowercase respectively.
+### Strings Package
 
----
+> The `strings` package offers tools to **search** and **manipulate** entire strings.
 
-## 🧰 Strings Package
-
-The `strings` package offers tools to **search** and **manipulate** entire strings.
-
-### 🔎 Search Functions
+#### Search Functions
 
 ```go
 strings.Compare(a, b)     // 0 if a == b, -1 if a < b, 1 if a > b
@@ -525,9 +519,9 @@ strings.HasPrefix(s, pre) // true if s starts with pre
 strings.Index(s, sub)     // index of first sub in s, or -1
 ```
 
-### 🛠️ String Manipulation
+#### String Manipulation
 
-All functions return a **new string**, as strings are immutable:
+> All functions return a **new string**, as strings are immutable:
 
 ```go
 strings.Replace(s, old, new, n) // replaces up to n instances of old with new
@@ -536,13 +530,11 @@ strings.ToUpper(s)              // uppercase version of s
 strings.TrimSpace(s)           // removes leading/trailing white space
 ```
 
----
+### Strconv Package
 
-## 🔁 Strconv Package
+> The `strconv` package is for **converting between strings and basic data types**.
 
-The `strconv` package is for **converting between strings and basic data types**.
-
-### 🔄 Conversion Functions
+#### Conversion Functions
 
 ```go
 strconv.Atoi(s)                      // string to int
@@ -551,11 +543,7 @@ strconv.FormatFloat(f, fmt, prec, bitSize) // float to string
 strconv.ParseFloat(s, bitSize)       // string to float
 ```
 
-> ⚠️ Lecture Note: In Lecture 2.2.3, at 5:14, the screen says `itoa(s)`, but it should be `itoa(i)` — `i` is the int being converted.
-
----
-
-## ✅ Summary
+### Notes on String Packages
 
 - Use `unicode` for character-level analysis and conversions
 - Use `strings` for full string search and manipulation
@@ -565,18 +553,11 @@ These packages make Go powerful for handling **text, encoding, and user input** 
 
 ---
 
-# Go Basics: Constants and `iota`
+## Go Basics: Constants and `iota`
 
-## 🧱 Constants
+> A **constant** is an expression whose value is known at **compile time** and cannot be changed. Features: Type is inferred from the **right-hand side** and Can declare **multiple constants** in a block
 
-A **constant** is an expression whose value is known at **compile time** and cannot be changed.
-
-### Features
-
-- Type is inferred from the **right-hand side**
-- Can declare **multiple constants** in a block
-
-### Example
+### Example: Constant
 
 ```go
 const x = 1.3
@@ -587,21 +568,7 @@ const (
 )
 ```
 
----
-
-## 🔁 `iota`
-
-`iota` is a special identifier used in constant declarations to generate a set of related but **distinct values**.
-
-### Use Cases
-
-Ideal for representing **enumerated types**:
-
-- Days of the week
-- Months of the year
-- Grades, states, modes, etc.
-
-You don’t care about the **specific values**, just that each constant is **different**.
+> `iota` is a special identifier used in constant declarations to generate a set of related but **distinct values**. Use Cases: Ideal for representing **enumerated types**: Days of the week, Months of the year, Grades, states, modes, etc. You don’t care about the **specific values**, just that each constant is **different**.
 
 ### Example: Enum for Grades
 
@@ -619,48 +586,38 @@ const (
 
 - Starts from `0` by default and **increments** by `1`
 - Equivalent to:
-  ```go
-  A = 0, B = 1, C = 2, D = 3, F = 4
-  ```
 
-> 🧠 **Note**: Although `iota` starts at `0` and increments, you **should not rely** on the actual numeric values.
+```go
+A = 0, B = 1, C = 2, D = 3, F = 4
+```
 
----
+> **Note**: Although `iota` starts at `0` and increments, you **should not rely** on the actual numeric values.
 
-## ✅ Summary
+### Notes on Constant and iota
 
 - Use `const` to define unchanging values known at compile time
 - `iota` is great for generating distinct constants automatically
 - Enables clean, readable enum-like declarations
-
-`iota` gives you a **shorthand** for enumerations without worrying about assigning explicit values.
+- `iota` gives you a **shorthand** for enumerations without worrying about assigning explicit values.
 
 ---
 
-# Go Basics: Control Flow
-
-## 🔁 What is Control Flow?
+## Go Basics: Control Flow
 
 Control flow describes the **order in which statements are executed** inside a program.
 
 - Default flow is **top-down** (one line at a time)
 - Can be altered using **control structures**
 
----
-
-## ⚖️ `if` Statements
+### `if` Statements
 
 Use `if` to conditionally execute code blocks based on a boolean condition.
-
-### Syntax
 
 ```go
 if condition {
   // code executes only if condition is true
 }
 ```
-
-### With `else`
 
 ```go
 if condition {
@@ -670,13 +627,11 @@ if condition {
 }
 ```
 
----
-
-## 🔁 `for` Loops
+### `for` Loops
 
 The only loop keyword in Go is `for`, but it supports multiple loop forms.
 
-### 1. Classic Loop (like in C)
+#### 1. Classic Loop (like in C)
 
 ```go
 for i := 0; i < 10; i++ {
@@ -688,7 +643,7 @@ for i := 0; i < 10; i++ {
 - `condition`: checked before each iteration
 - `update`: runs after each iteration
 
-### 2. Condition-only Loop (like `while`)
+#### 2. Condition-only Loop (like `while`)
 
 ```go
 i := 0
@@ -698,7 +653,7 @@ for i < 10 {
 }
 ```
 
-### 3. Infinite Loop
+#### 3. Infinite Loop
 
 ```go
 for {
@@ -708,13 +663,9 @@ for {
 
 > ⚠️ Make sure the loop condition eventually becomes false to avoid infinite loops (unless intentional).
 
----
-
-## 🔄 `switch` Statement
+### `switch` Statement
 
 A `switch` provides a cleaner way to handle multiple conditional branches.
-
-### Syntax
 
 ```go
 switch x {
@@ -727,49 +678,16 @@ default:
 }
 ```
 
-### Key Notes
-
 - Compares the value of `x` to each case
 - **Only one case is executed**
 - **No need for `break`** like in C — it auto-breaks
 - `default` is optional, runs if no case matches
 
----
-
-## ✅ Summary
-
-- Use `if` and `if-else` for conditional branches
-- Use `for` for looping (supports C-style, condition-only, infinite)
-- Use `switch` for multi-way conditional branching
-
-Control flow is essential for writing dynamic and responsive Go programs!
-
----
-
-# Go Control Flow and Input
-
-## 🔁 Control Flow
-
-Control flow describes the **order in which statements execute** in a program.
-
-- Default flow is **top-down**, one statement after another.
-- Programmers insert **control structures** to modify this flow.
-
-### 🧩 Control Structures
-
-- `if`, `if-else` statements
-- `for` loops
-- `switch/case` statements
-
----
-
-## 🔄 Tagless Switch
+### Tagless Switch
 
 - A **switch** does not need a tag.
 - Each `case` contains a **boolean condition**.
 - The **first case** that evaluates to `true` is executed.
-
-### Example
 
 ```go
 switch {
@@ -782,11 +700,9 @@ switch {
 }
 ```
 
----
+### Break and Continue
 
-## ⛔ Break and 🔁 Continue
-
-### Break
+#### Break
 
 - Immediately **exits** the current loop.
 
@@ -799,7 +715,7 @@ for i := 0; i < 10; i++ {
 }
 ```
 
-### Continue
+#### Continue
 
 - **Skips** the current iteration of the loop.
 
@@ -814,13 +730,11 @@ for i := 0; i < 10; i++ {
 
 ---
 
-## 📥 `fmt.Scan` — Reading User Input
+## `fmt.Scan` — Reading User Input
 
 - Reads user input from the terminal
 - Takes a **pointer** as an argument
 - Blocks until **Enter** is pressed
-
-### Example
 
 ```go
 var appleNum int
@@ -829,20 +743,10 @@ fmt.Scan(&appleNum)
 fmt.Printf("You entered: %d\n", appleNum)
 ```
 
-### Details
 
 - Stores the value in the location pointed to by the argument
 - Returns two values:
   - Number of scanned items
   - An `error` value (`nil` if successful)
-
----
-
-## ✅ Summary
-
-- Go supports structured control flow via `if`, `for`, and `switch`
-- Tagless `switch` provides a clean `if-else` alternative
-- Use `break` and `continue` to fine-tune loop execution
-- Use `fmt.Scan` to gather user input with pointer-based assignments
 
 ---
