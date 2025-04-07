@@ -2,62 +2,61 @@
 
 **Q1.** What does a compiler do?
 
-- ○ Generates executable machine code from source code in a high-level language
-- ○ Automatically formats source code in a readable way
-- ○ Combines multiple files into a single program
-- ○ Tests the basic functionality of the code
+- Generates executable machine code from source code in a high-level language
+- Automatically formats source code in a readable way
+- Combines multiple files into a single program
+- Tests the basic functionality of the code
 
 **Q2.** What is the scope of a variable?
 
-- ○ The variable declaration
-- ○ The instructions where the variable is assigned a value
-- ○ Region of a program where the variable can be accessed
-- ○ The set of values to which a variable can be assigned
+- The variable declaration
+- The instructions where the variable is assigned a value
+- Region of a program where the variable can be accessed
+- The set of values to which a variable can be assigned
 
 **Q3.** What is Garbage Collection?
 
-- ○ Reorganization of source code to reduce the number of function calls
-- ○ Deallocation of objects which are no longer in use
-- ○ Reorganization of source code to improve encapsulation and understandability
-- ○ Deletion of unused segments of code
+- Reorganization of source code to reduce the number of function calls
+- Deallocation of objects which are no longer in use
+- Reorganization of source code to improve encapsulation and understandability
+- Deletion of unused segments of code
 
 **Q4.** What does an interpreter do?
 
-- ○ Converts instructions in a high-level language into machine code at runtime
-- ○ Processes user inputs
-- ○ Reads files in a given data format
-- ○ Produces output data corresponding to each input region
+- Converts instructions in a high-level language into machine code at runtime
+- Processes user inputs
+- Reads files in a given data format
+- Produces output data corresponding to each input region
 
-**Q5. True or False:**  
-Concurrency always results in some performance improvement.
+**Q5. True or False:**  Concurrency always results in some performance improvement.
 
-- ○ True
-- ○ False
+- True
+- False
 
 **Q6.** The type of a variable determines which of the following aspects of that variable? (Select ALL that are correct.)
 
-- ☐ Size in memory
-- ☐ Operations that can be performed on the variable
-- ☐ The data that can be contained in the object
-- ☐ The number of characters in the variable's name
+- Size in memory
+- Operations that can be performed on the variable
+- The data that can be contained in the object
+- The number of characters in the variable's name
 
 **Q7.** What is the name of the package from which an executable program is generated?
 
-- ○ fmt
-- ○ os
-- ○ init
-- ○ main
+- fmt
+- os
+- init
+- main
 
 **Q8.** Which of the following is an example of a short variable declaration?
 
-- ○ `x := 2.3`
-- ○ `var x int = 10`
-- ○ `var x int`
-- ○ `x = 2.3`
+- `x := 2.3`
+- `var x int = 10`
+- `var x int`
+- `x = 2.3`
 
 ---
 
-### ✅ **Answers with Explanations**
+### ✅ **Answers**
 
 **Q1.** ✔️ _Generates executable machine code from source code in a high-level language_  
 **Explanation:** A compiler translates high-level programming code into machine code (binary) that the computer can execute.
