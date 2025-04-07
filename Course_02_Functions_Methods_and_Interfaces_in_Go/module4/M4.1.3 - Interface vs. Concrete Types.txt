@@ -1,4 +1,4 @@
-Module 4: Interfaces for Abstraction, Topic 1.3: Interface
+new note, next note, same style: Module 4: Interfaces for Abstraction, Topic 1.3: Interface
 versus Concrete Types. So concrete types and interface
 types are fundamentally different. A concrete type is a regular type, it specifies the exact representation
 of the data and the methods, data specifically, but also methods that

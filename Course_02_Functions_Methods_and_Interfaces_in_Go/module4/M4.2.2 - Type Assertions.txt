@@ -1,4 +1,4 @@
-Module four, Interfaces for Abstraction. Topic 2.2, Type Assertions. So a lot of the point of an interface is
+new note, next note, same style: Module four, Interfaces for Abstraction. Topic 2.2, Type Assertions. So a lot of the point of an interface is
 to conceal differences between types. So if you think about it, an interface can
 hide the differences between two types. It basically highlights
 the two similarities. So while in this fit and yard

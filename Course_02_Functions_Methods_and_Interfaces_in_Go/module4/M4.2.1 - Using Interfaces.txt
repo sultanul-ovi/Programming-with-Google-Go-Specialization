@@ -1,4 +1,4 @@
-Thank you. Thank you. So interfaces, we've talked about them. And one thing we want to talk about now
+new note, next note, same style: Thank you. Thank you. So interfaces, we've talked about them. And one thing we want to talk about now
 is a little bit of how to use them. So what are they used for, language-wise? And in language,
 why would you need an interface? And I already said, interfaces, they express some sort of a conceptual
 similarity between different types. So the idea is that if two

@@ -1,4 +1,4 @@
-Module 4, Interfaces for
+new note, next note, same style: Module 4, Interfaces for
 Abstraction, Topic 1.2, Interfaces. An interface is a concept used in Go and
 it helps us get polymorphisms. So we don't get inheritance, we don't need
 inheritance, we don't need overriding. We can use interfaces to basically

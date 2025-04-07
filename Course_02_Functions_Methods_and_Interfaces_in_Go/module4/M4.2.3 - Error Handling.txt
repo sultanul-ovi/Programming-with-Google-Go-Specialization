@@ -1,4 +1,4 @@
-Module 4, Interfaces for Abstraction,
+new note, next note, same style: Module 4, Interfaces for Abstraction,
 Topic 2.3, Error Handling. So I just want to show a common
 use of interfaces in Go. The Error Interface. So there are a lot of different Go
 functions that are built into packages, which return errors. And when I say return errors,
