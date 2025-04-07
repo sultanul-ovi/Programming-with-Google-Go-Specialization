@@ -1,4 +1,4 @@
-# 📝 **Questions Section**
+# 📝 **Questions**
 
 **Question 1:**  
 What is printed when the following program is executed?
@@ -90,7 +90,7 @@ fmt.Println(len(s), cap(s))
 
 ---
 
-### ✅ **Answers with Explanations**
+### ✅ **Answers**
 
 ---
 
