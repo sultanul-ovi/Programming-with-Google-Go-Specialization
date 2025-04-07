@@ -42,7 +42,7 @@ In this example:
 
 ### The `new` Function
 
-Go provides the `new()` function to create variables and return **pointers** to them.
+> Go provides the `new()` function to create variables and return **pointers** to them.
 
 #### Example 02
 
@@ -54,25 +54,21 @@ ptr := new(int) // ptr is a pointer to a new int initialized to 0
 - `new(int)` allocates memory for an int and returns a pointer to it
 - `*ptr = 3` sets the allocated int's value to 3
 
-## 🎯 Summary
+### Summary
 
 - A **pointer** is just an address pointing to data in memory
 - `&` gives you the address, `*` gives you the data
 - `new()` creates a new variable and returns a pointer to it, defaulting the value to zero
 
-By mastering pointers, you gain better control over memory and variable management in Go!
-
-## Go Basics: Variable Scope
-
-## 🔍 What is Variable Scope?
-
-**Scope** refers to the regions of the code where a variable is **accessible**. It determines how variable names are resolved during compilation and runtime.
-
 ---
 
-## 🧪 Example: Global vs Local Scope
+## What is Variable Scope?
 
-### Version 1: Global `x`
+> **Scope** refers to the regions of the code where a variable is **accessible**. It determines how variable names are resolved during compilation and runtime.
+
+### Example 03: Global vs Local Scope
+
+#### Version 1: Global `x`
 
 ```go
 var x = 4
@@ -86,11 +82,9 @@ func g(){
 }
 ```
 
-- `x` is declared outside the functions.
-- Both `f()` and `g()` print **4**.
-- `x` has **global (file) scope**.
+- `x` is declared outside the functions. Both `f()` and `g()` print **4**. `x` has **global (file) scope**.
 
-### Version 2: Local `x`
+#### Version 2: Local `x`
 
 ```go
 func f(){
@@ -103,12 +97,11 @@ func g(){
 }
 ```
 
-- `x` is local to `f()`.
-- `g()` cannot access `x`, causing a **compilation error**.
+- `x` is local to `f()`. `g()` cannot access `x`, causing a **compilation error**.
 
 ---
 
-## 🧱 Blocks in Go
+## Blocks in Go
 
 A **block** is a sequence of declarations and statements inside curly braces `{}`.
 
@@ -129,7 +122,7 @@ Blocks can be **nested**, and variables declared in outer blocks are accessible 
 
 ---
 
-## 🔒 Lexical Scoping in Go
+## Lexical Scoping in Go
 
 Go uses **lexical (static) scoping** based on block structure:
 
@@ -141,7 +134,7 @@ Go uses **lexical (static) scoping** based on block structure:
 - If `bj` is nested inside `bi`, then `bi >= bj`
 - Variable reference is resolved by scanning **upward** in the block hierarchy
 
-### Scope Resolution Example
+#### Example 04 Scope Resolution
 
 ```go
 // File Block (b1)
@@ -172,21 +165,9 @@ func g() { // Block b3
 
 ---
 
-## 📌 Final Notes
-
-- Be careful where you declare your variables
-- Use outer blocks for shared variables
-- Prefer smaller scopes when possible to avoid accidental modification or conflicts
-
-> 🛠️ **Correction from Lecture M2.1.2**: The instructor said `x = 1`, but it should be `x = 4` — the screen text is correct.
-
-Understanding scope ensures better **code organization**, **error prevention**, and **logical clarity**.
-
 ## Go Memory Management: Deallocating Space
 
-## 🧠 Why Deallocation Matters
-
-When a variable is no longer needed, its **memory must be deallocated** to free up space. Failing to do this results in **memory leaks**, eventually consuming all available memory.
+> When a variable is no longer needed, its **memory must be deallocated** to free up space. Failing to do this results in **memory leaks**, eventually consuming all available memory.
 
 ```go
 func f() {
@@ -197,13 +178,11 @@ func f() {
 
 Each call to `f()` creates a **new instance of `x`**, which must be deallocated when the function ends.
 
----
-
-## 🗃️ Stack vs. Heap
+### Stack vs. Heap
 
 Go manages memory using two main areas: **stack** and **heap**.
 
-### Version 1: Global Variable (Heap)
+#### Version 1: Global Variable (Heap)
 
 ```go
 var x = 4 // allocated on heap
@@ -217,7 +196,7 @@ func g() {
 }
 ```
 
-### Version 2: Local Variable (Stack)
+#### Version 2: Local Variable (Stack)
 
 ```go
 func f() {
@@ -230,22 +209,20 @@ func g() {
 }
 ```
 
-### Key Differences
+#### Key Differences
 
-- 🧱 **Stack**:
+- **Stack**:
 
   - Used for **function calls**
   - Stores **local variables**
   - Automatically deallocated when function completes
 
-- 🧠 **Heap**:
+- **Heap**:
   - Used for **persistent data**
   - Variables must be **explicitly deallocated** in many languages
   - Memory does **not disappear** when the allocating function ends
 
----
-
-## 🧹 Manual Deallocation (In C)
+### Manual Deallocation (In C)
 
 ```c
 x = malloc(32);  // allocate 32 bytes
@@ -256,16 +233,14 @@ free(x);         // deallocate memory
 - **Fast**, but **error-prone**
 - Forgetting to free memory = **memory leak**
 
----
-
-## 🧠 How Go Handles This
+### How Go Handles This
 
 Go takes a **hybrid approach**:
 
 - Local variables may be placed on **stack** and deallocated automatically
 - Other variables may be **heap-allocated**, and Go uses **garbage collection** to handle deallocation
 
-### Debug Tip:
+#### Debug Tip
 
 Use this command to check variable allocation:
 
@@ -275,25 +250,20 @@ go build -o demo.exe -gcflags -m
 
 This shows whether a variable was allocated on the **stack** or **heap** by the Go compiler.
 
----
-
-## 📌 Final Thoughts
+### Notes
 
 - Memory must be deallocated when no longer needed
 - Stack = automatic deallocation; Heap = manual (in some languages)
 - Go simplifies this with **garbage collection**, but understanding memory layout helps with performance and debugging
 
-## Go Memory Management: Garbage Collection
-
-## 🗑️ What is Garbage Collection?
-
-**Garbage collection (GC)** is the process of automatically identifying and **deallocating memory** that is no longer in use.
-
-In programming, it’s often hard to determine when a variable is truly unused. Especially when pointers are involved, deallocation becomes complex and error-prone.
-
 ---
 
-## 📌 Problem with Manual Deallocation
+## Go Memory Management: Garbage Collection
+
+> **Garbage collection (GC)** is the process of automatically identifying and **deallocating memory** that is no longer in use.
+> In programming, it’s often hard to determine when a variable is truly unused. Especially when pointers are involved, deallocation becomes complex and error-prone.
+
+### Problem with Manual Deallocation
 
 ```go
 func foo() *int {
@@ -312,34 +282,28 @@ func main() {
 - Even after `foo()` ends, `main()` still uses the pointer.
 - Deallocating `x` when `foo()` finishes would cause undefined behavior.
 
----
+### Manual vs Automatic Deallocation
 
-## ⚖️ Manual vs Automatic Deallocation
-
-### Interpreted Languages (e.g., Java, Python)
+#### Interpreted Languages (e.g., Java, Python)
 
 - Garbage collection is handled by the **interpreter** (e.g., JVM, Python Interpreter)
 - ✅ Easy for the programmer
 - ❌ Slower due to interpretation overhead
 
-### Compiled Languages (e.g., C)
+#### Compiled Languages (e.g., C)
 
 - No garbage collection
 - ✅ Fast
 - ❌ Programmer must **manually** allocate and deallocate memory (e.g., `malloc()` and `free()`)
 
----
-
-## 🚀 Go's Advantage: Compiled + Garbage Collection
-
-Go is a **compiled language** that includes built-in **garbage collection**:
+### Go's Advantage: Compiled Language + built-in Garbage Collection
 
 - ✅ No need to manually manage memory
 - ✅ Faster than interpreted languages
 - ✅ Compiler decides **stack vs heap** allocation
 - ✅ Garbage collection happens in the background
 
-### How Go GC Works
+#### How Go GC Works
 
 - Keeps track of all **references (pointers)** to a variable
 - When **no references remain**, memory is safely deallocated
@@ -351,16 +315,12 @@ Go is a **compiled language** that includes built-in **garbage collection**:
 go build -gcflags -m
 ```
 
----
-
-## ⚠️ Trade-off
+### Trade-off
 
 - Garbage collection incurs **some performance overhead**
 - But the convenience and safety it brings are usually worth it
 
----
-
-## ✅ Summary
+### Summary notes
 
 - Deallocating memory is essential, but tricky when pointers are involved
 - Go simplifies this with a **built-in garbage collector**
@@ -368,11 +328,11 @@ go build -gcflags -m
 
 Garbage collection is one of Go’s **most helpful features**, making it easier and safer to write efficient code.
 
-## Go Basics: Comments, Printing, and Integers
+---
 
-## 💬 Comments
+## Go Basics: Comments and Printing
 
-Comments improve code readability and are **ignored by the compiler**.
+> Comments improve code readability and are **ignored by the compiler**.
 
 ### Single-line Comments
 
@@ -391,21 +351,12 @@ var x int // Comment after a statement
 var x int
 ```
 
----
+### Printing is handled using the `fmt` package.
 
-## 🖨️ Printing in Go
-
-Printing is handled using the `fmt` package.
-
-### Import the Package
+> Import the Package + Basic Printing
 
 ```go
 import "fmt"
-```
-
-### Basic Printing
-
-```go
 fmt.Println("Hello, World!")
 ```
 
@@ -426,12 +377,10 @@ Format strings let you insert values neatly into output using `%` codes.
 
 ---
 
-## 🔢 Integers in Go
-
-### Declaration
+## Integers, Floats and Strings in Go
 
 ```go
-var x int // Generic integer
+var x int // Generic integer declaration
 ```
 
 ### Integer Types
@@ -457,22 +406,11 @@ var x int // Generic integer
 - **Boolean**: `&&`, `||`
 - **Bitwise**: `&`, `|`, `^`, `<<`, `>>`
 
----
-
-- Use `//` and `/* */` for adding helpful comments
-- Print output using `fmt.Printf()` and `fmt.Println()`
-- Choose integer types based on size and sign requirements
-- Operators allow arithmetic, comparison, and logic operations on integers
-
----
-
-# Go Basics: Ints, Floats, and Strings
-
-## 🔄 Type Conversions
+### Type Conversions
 
 - Binary operations require operands to be **of the same type**, including assignment
 
-### Example (❌ Invalid Assignment)
+#### Example (❌ Invalid Assignment)
 
 ```go
 var x int32 = 1
@@ -480,35 +418,33 @@ var y int16 = 2
 x = y // ERROR: mismatched types
 ```
 
-### ✅ Type Conversion Syntax
+#### Example ✅ Type Conversion Syntax
 
 ```go
+var x int32 = 1
+var y int16 = 2
 x = int32(y) // Correct: convert y to int32
 ```
 
----
-
-## 🌊 Floating Point Types
+### Floating Point Types
 
 - **float32**: ~6 decimal digits of precision
 - **float64**: ~15 decimal digits of precision
 
-### Examples
+#### Examples
 
 ```go
 var x float64 = 123.45
 var y float64 = 1.234e2 // scientific notation = 123.4
 ```
 
-### Complex Numbers
+#### Complex Numbers
 
 ```go
 var z complex128 = complex(2, 3) // 2 + 3i
 ```
 
----
-
-## 🔡 ASCII and Unicode
+### ASCII and Unicode
 
 - **ASCII**: 7/8-bit character code (e.g., `'A' = 0x41`)
 - **Unicode**: 32-bit character set supporting global languages
@@ -516,22 +452,20 @@ var z complex128 = complex(2, 3) // 2 + 3i
   - First 128 UTF-8 codes = ASCII
   - Allows encoding characters using 8, 16, or 32 bits
 
-### Definitions
+#### Definitions
 
 - **Code Point**: A Unicode character
 - **Rune**: Go's term for a Unicode code point
 
 🔗 [Learn more about Unicode](http://unicode.org/faq/utf_bom.html)
 
----
-
-## 📦 Strings in Go
+### Strings in Go
 
 - A **string** is a **read-only** sequence of **UTF-8 encoded bytes**
 - **Immutable**: cannot be changed in-place
 - Often used for display/output
 
-### Example
+#### Example
 
 ```go
 x := "Hi there"
@@ -540,9 +474,7 @@ x := "Hi there"
 - Each character is stored as a **rune**
 - Enclosed in double quotes (`"`)
 
----
-
-## ✅ Summary
+### ✅ Summary
 
 - Convert types explicitly using the `T(value)` format
 - Use `float32` or `float64` based on precision needs
