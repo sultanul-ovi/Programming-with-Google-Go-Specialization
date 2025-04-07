@@ -1,33 +1,40 @@
 package main
 
-import "fmt"
-import "time"
+import (
+	"fmt"
+)
 
 func main() {
-	fmt.Println(getNumber())
-}
+	i := 0
+	// Run forever to make it to show race condition
+	for {
+		var x, y int
 
-func getNumber() int {
-	var i int
-	go func() {
-		i = 5
-	}()
-	time.Sleep(1 * time.Nanosecond) // Comment this to see the race condition
-	return i
-}
+		// Set x to 60
+		go func(v *int) {
+			*v = 60
+		}(&x)
 
-/*
-Race Condition
-A data race happens when two goroutines access the same variable concurrently, and at least one of the access is a write instruction.
-Detecting a race
-Use the command
-	go run -race race.go to generate the race report
-	uncomment line 15
-	go run -race race.go to generate the race report
-Conclusion
-•	Result one and two generates 2 different numbers after adding wait period
-•	Adding the pause caused the result to be 5 (should be 0)
-•	-race parameter generates a report to find data races.
-•	The report describes when the write value happened
-The example provided commenting/uncommenting line 15 shows the difference of context switching
-*/
+		// Set y to 3
+		go func(v *int) {
+			*v = 3
+		}(&y)
+
+		/*
+		  Raca condition is when multiple threads are trying to access and manipulat the same variable.
+		  the code below are all accessing and changing the value.
+		  Divide x (60) by y (3) and assign to z (42)...
+		  Except if y is not assigned 3 before x is assigned 60,
+		  y's initialized value of 0 is used,
+		  Due to the uncertainty of Goroutine scheduling mechanism, the results of the following program is unpredictable,
+		  which causes divide by zero exception.
+		*/
+		go func(v1 int, v2 int) {
+			fmt.Println(v1 / v2)
+		}(x, y)
+
+		i += 1
+
+		fmt.Printf("%d\n", i)
+	}
+}
