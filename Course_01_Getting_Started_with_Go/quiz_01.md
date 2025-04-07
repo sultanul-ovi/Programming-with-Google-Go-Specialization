@@ -1,4 +1,4 @@
-# 📝 **List of Questions**
+# 📝 **Questions**
 
 **Q1.** What does a compiler do?
 
