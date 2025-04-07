@@ -79,7 +79,7 @@ Finally, we’ll begin working with the Go language directly:
 
 Suppose you're building an application that performs 3D geometric calculations. You'll likely work with **points**.
 
-#### Each `Point` has:
+#### Each `Point` has
 
 - **Data**:
   - `x`, `y`, and `z` coordinates
@@ -87,7 +87,7 @@ Suppose you're building an application that performs 3D geometric calculations. 
   - `DisToOrigin()`: Calculates the distance from the origin
   - `Quadrant()`: Determines the spatial quadrant
 
-### In Traditional OOP:
+### In Traditional OOP
 
 - A **`class`** defines:
   - The structure (data fields)
@@ -102,7 +102,7 @@ Go supports OOP concepts but with a simpler approach:
 - Uses **`struct`** to define custom data types
 - Methods can be associated with structs to define behavior
 
-### Simplified OOP Model:
+### Simplified OOP Model
 
 | Feature      | Go Implementation         |
 | ------------ | ------------------------- |
@@ -130,7 +130,7 @@ Go supports OOP concepts but with a simpler approach:
 - While clock speeds have plateaued, the number of **cores per processor is increasing**.
 - Multiple cores = possibility of running **multiple tasks simultaneously**.
 
-#### Challenges in Parallel Programming:
+#### Challenges in Parallel Programming
 
 - When should **tasks start or stop**?
 - How should **tasks communicate**, especially if one depends on another?
@@ -221,107 +221,89 @@ If installed successfully, it should return the installed version number.
 
 ---
 
-# 🧮 Variables
+## Variables
 
----
-
-## 🏷️ Naming Rules
+### Naming Rules
 
 To refer to values in a program, you need **names**—for variables, functions, etc.
 
 - Must start with a **letter**
 - Can include **letters, digits, and underscores**
 - **Case-sensitive** (e.g., `myVar` ≠ `MyVar`)
-- Cannot use **Go reserved keywords** like:
-  - **_if_**, **_case_**, **_package_**, etc.
+- Cannot use **Go reserved keywords** like: **_if_**, **_case_**, **_package_**, etc.
 
-## 📦 Variable Basics
+### Variable Basics
 
 - A variable stores **data in memory**
-- Every variable has:
-  - A **name**
-  - A **type**
+- Every variable has: A **name** and A **type**
 - All variables must be **declared before use**
 - You can declare multiple variables of the same type on the same line
 
-### 📝 Basic Declaration:
+#### Basic Declaration
 
 ```golang
 var x int // keyword name type
 ```
 
-### 📍 Declaring Multiple Variables:
+#### Declaring Multiple Variables
 
 ```golang
 var x, y int
 ```
 
-## 🔠 Variable Types
+### Variable Types
 
-A **type** defines:
+A **type** defines: What **values** a variable can store and What **operations** can be performed on it.
 
-- What **values** a variable can store
-- What **operations** can be performed on it
-
-### 🔢 Integer
+#### Integer
 
 - Whole numbers only
 - Supports arithmetic: `+`, `-`, `*`, `/`, `%`
 
-### 🌊 Floating Point
+#### Floating Point
 
 - Fractional (decimal) values
 - Operations like addition, subtraction, division
 - May be handled by **special hardware**
 
-### 🔤 Strings
+#### Strings
 
 - A sequence of **Unicode bytes**
-- Operations include:
-  - Comparison
-  - Search
-  - Concatenation
+- Operations include: Comparison, Search, Concatenation.
 
-✅ The compiler uses the variable's type to:
+> The compiler uses the variable's type to: Allocate the correct amount of memory and Select the proper machine-level instructions during compilation
 
-- Allocate the correct amount of memory
-- Select the proper machine-level instructions during compilation
-
----
-
-# 🔢 Variable Initialization
-
----
-
-## 🧾 Type Declarations
+### Type Declarations
 
 - Every variable in Go must have a type.
 - You can define **type aliases** to improve code clarity.
 
-### Examples:
+#### Examples
 
 - `type Celsius float64` – Useful for temperature-related data.
 - `type IDnum int` – Useful for labeling things like user ID numbers.
 
-Using aliases makes your code **semantically meaningful**—you understand the purpose of a variable from its type name.
+> Using aliases makes your code **semantically meaningful**—you understand the purpose of a variable from its type name.
 
-## 🚀 Initializing Variables
+### Initializing Variables
 
-### ✅ During Declaration
+During Declaration: You can declare and initialize a variable in one line
 
-- You can declare and initialize a variable in one line:
-  - `var x int = 100` – Explicit type
-  - `var x = 100` – Type is inferred as `int` from the value
+```go
+var x int = 100       //Explicit type
+var x = 100          // Type is inferred as `int` from the value
+```
 
 > ⚠️ Be cautious when omitting the type. For example, `var x = 100` makes `x` an `int`. If you later assign `x = 100.1`, it will cause a type mismatch.
 
-### ✅ After Declaration
+After Declaration: Declare first, initialize later
 
-- Declare first, initialize later:
-  - `var x int`
-  - `x = 100`
+```go
+var x int
+x = 100
+```
 
-## 🟰 Zero Values
+### Zero Values
 
 If you declare a variable without initializing it, Go assigns a **default zero value**:
 
@@ -330,10 +312,13 @@ If you declare a variable without initializing it, Go assigns a **default zero v
 
 This ensures all variables are always in a valid state, even before assignment.
 
-## ⚡ Short Variable Declarations
+### Short Variable Declarations
 
-- Use `:=` to declare and initialize in one step:
-  - `x := 100`
+Use `:=` to declare and initialize in one step:
+
+```go
+x := 100
+```
 
 This automatically infers the type of `x` from the right-hand side (`int` in this case).
 
