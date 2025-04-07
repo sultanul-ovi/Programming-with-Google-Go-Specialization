@@ -162,7 +162,7 @@ Go was designed from the ground up for concurrency:
 
 ---
 
-## 🛠️ Installing Go (Golang)
+## Installing Go (Golang)
 
 - Go to [https://golang.org](https://golang.org)
 - Locate the button: **Download Go** and click it.
@@ -187,24 +187,19 @@ If installed successfully, it should return the installed version number.
 
 ---
 
-# 🧰 Go Tools
+## Go Tools
 
----
-
-## 📦 Import
+### Import
 
 - The **_import_** keyword is used to access other packages.
-- The Go standard library includes many built-in packages.
-  - Example: **_"fmt"_**
-- When importing, Go searches the directories defined by:
-  - **_GOROOT_**
-  - **_GOPATH_**
+- The Go standard library includes many built-in packages. Example: **_"fmt"_**
+- When importing, Go searches the directories defined by: **_GOROOT_** and **_GOPATH_**
 
-## 🔧 Go Tool Overview
+### Go Tool Overview
 
 - The Go Tool is a command-line utility used to **build, run, format, test, and manage Go source code**.
 
-### 🛠 Common Go Tool Commands
+### Common Go Tool Commands
 
 - **_go build_** – Compiles the program.
 
