@@ -4,3 +4,8 @@ Continue your exploration of the Go programming language as you learn about func
 - Identify the benefits of using pointers when working with functions.
 - Identify the difference between passing a slice and an array as function arguments.
 - Use functions and a slice to implement a sorting routine for integers.
+Before watching the lectures, please note the following:
+
+There is a small amount of controversy surrounding the expressions "pass by pointer" and "pass by reference." Just search the web for "Pass by Pointer vs. Pass by Reference in Go Programming" and you'll see for yourself! Be aware that our instructor uses "pass by reference" where some Go users would say "pass by pointer" or "pass a pointer." 
+
+Video Lecture M1.1.4: At 4:07, the code appearing on the screen is missing square brackets in function foo as follows: foo(slide [] int).
