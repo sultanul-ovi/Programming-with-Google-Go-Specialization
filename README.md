@@ -42,8 +42,8 @@ This intermediate-level, three-course specialization introduces the **Go (Golang
 
 > I have added 50 leetcode tasks (with their solutions) relevant to this specialization. | [Leetcode Tasks](leetcode/tasks.md)
 
-## 📚 Recommended Learning Resources
-
+## 💡 Project
+> I will try solving a project in Go
 ---
 
 ## 📚 Recommended Learning Resources
