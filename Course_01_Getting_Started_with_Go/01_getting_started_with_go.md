@@ -1,4 +1,4 @@
-# Module 1 Overview – Getting Started with Go
+# Module 1: Getting Started with Go
 
 ---
 

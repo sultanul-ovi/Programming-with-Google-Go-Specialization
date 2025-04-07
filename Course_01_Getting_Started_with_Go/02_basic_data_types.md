@@ -1,53 +1,30 @@
-# Welcome to Module 2: Go Data Types
+# Module 2: Go Data Types
 
-Welcome to the second module! In this module, we'll start exploring the **Go programming language** in more detail—specifically focusing on **basic data types**.
-
-## What You'll Learn
+---
 
 In this module, we will cover:
 
-- An introduction to Go data types
+- An introduction to Go data types: **Integers**, **Floats**, **Booleans**, **Strings**
 - How to **declare and create** variables of different types
 - How to **use built-in functions** associated with each type
-
-## Topics Covered
-
-You'll learn about the following **common data types** in Go:
-
-- **Integers**
-- **Floats**
-- **Booleans**
-- **Strings**
 
 We will also explore **variations** of these types, such as:
 
 - Changing the **bit-length** of integers and floats
 - Working with **different formats** of strings and booleans
 
-## Practical Skills
-
-By the end of this module, you’ll be able to:
-
-✅ Declare and use basic data types in Go  
-✅ Apply functions to manipulate and interact with integers, strings, booleans, and floats  
-✅ Understand how Go handles data types compared to other programming languages
-
 ---
 
-Let's dive in and get comfortable using data types in Go!
+## What Are Pointers?
 
-## Go Basics: Understanding Pointers
+> Pointers are variables that **store the memory address** of another variable. Every variable in Go resides somewhere in memory, and pointers help you work with that memory directly.
 
-## 🧠 What Are Pointers?
-
-Pointers are variables that **store the memory address** of another variable. Every variable in Go resides somewhere in memory, and pointers help you work with that memory directly.
-
-### 📍 Two Important Operators
+### Two Important Operators
 
 - `&` (Ampersand): **Returns the memory address** of a variable
 - `*` (Asterisk): **Dereferences a pointer**, i.e., gets the value stored at the memory address
 
-### 📌 Example1
+#### Example 01
 
 ```go
 var x int = 1
@@ -63,11 +40,11 @@ In this example:
 - `ip` holds the address of `x`
 - `*ip` retrieves the value of `x`, and assigns it to `y`
 
-## 🔧 The `new` Function
+### The `new` Function
 
 Go provides the `new()` function to create variables and return **pointers** to them.
 
-### 📌 Example2
+#### Example 02
 
 ```go
 ptr := new(int) // ptr is a pointer to a new int initialized to 0
