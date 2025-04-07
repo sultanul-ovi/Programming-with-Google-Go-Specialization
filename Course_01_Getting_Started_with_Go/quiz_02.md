@@ -1,4 +1,4 @@
-# 📝 **List of Questions**
+# 📝 **Questions**
 
 **Q1.** Which of the following expressions does **NOT** compute the average of two integers `a` and `b`?
 
@@ -109,7 +109,7 @@ func main() {
 
 ---
 
-### ✅ **Answers with Explanations**
+### ✅ **Answers**
 
 **Question 1:**  
 **Which of the following expressions does NOT compute the average of two integers `a` and `b`?**  
