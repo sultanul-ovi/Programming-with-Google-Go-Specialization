@@ -1,4 +1,4 @@
-# 🧭 Module 1 Overview – Getting Started with Go
+# Module 1 Overview – Getting Started with Go
 
 ---
 
@@ -49,21 +49,10 @@ Finally, we’ll begin working with the Go language directly:
 
 ### Developer-Centric Language
 
-Go was designed by experienced engineers at Google who wanted to fix frustrations they had with other languages:
+- Go was designed by experienced engineers at Google who wanted to fix frustrations they had with other languages: Long compile times, Complex dependency management, Difficult concurrency models, Bloated syntax.
+- **Go’s response:** Fast compile times, Simple syntax, Built-in tools like `go fmt`, `go run`, `go mod`, Excellent documentation practices.
 
-- Long compile times
-- Complex dependency management
-- Difficult concurrency models
-- Bloated syntax
-
-**Go’s response:**
-
-- Fast compile times
-- Simple syntax
-- Built-in tools like `go fmt`, `go run`, `go mod`
-- Excellent documentation practices
-
-### 🧭 Conclusion: Why You Should Learn Go
+## Conclusion: Why we Should Learn Go
 
 | Feature              | Why It Matters                                             |
 | -------------------- | ---------------------------------------------------------- |
@@ -73,27 +62,24 @@ Go was designed by experienced engineers at Google who wanted to fix frustration
 | Simple & Readable    | Easier to learn and maintain code                          |
 | Modern & Scalable    | Perfect for microservices, APIs, and scalable architecture |
 
-🚀 **Bottom line**: Go combines the **speed of low-level languages** with the **developer-friendly features of high-level interpreted languages**—a perfect balance for modern software engineering.
+> **Bottom line**: Go combines the **speed of low-level languages** with the **developer-friendly features of high-level interpreted languages**—a perfect balance for modern software engineering.
 
 ---
 
-# 🧱 Object-Oriented Programming in Go
+## Object-Oriented Programming in Go
 
-Object-Oriented Programming (OOP) is a method of structuring code to improve readability, modularity, and reusability. It’s based on the concept of **encapsulation**, grouping together related data and the functions that operate on that data.
+> Object-Oriented Programming (OOP) is a method of structuring code to improve readability, modularity, and reusability. It’s based on the concept of **encapsulation**, grouping together related data and the functions that operate on that data.
 
----
-
-## 🔒 Key Concepts of OOP
+### Key Concepts of OOP
 
 - **Encapsulation**: Organize code by bundling data and associated functions.
-- **User-defined types**: Create types tailored to specific applications.
-  - Example: An `int` has both **data** (the value) and **functions** (e.g., `+`, `-`, `*`, `/`, `%`).
+- **User-defined types**: Create types tailored to specific applications. Example: An `int` has both **data** (the value) and **functions** (e.g., `+`, `-`, `*`, `/`, `%`).
 
-## 🧮 Object Example – Geometry in 3D
+### Object Example – Geometry in 3D
 
 Suppose you're building an application that performs 3D geometric calculations. You'll likely work with **points**.
 
-### 🧊 Each `Point` has:
+#### Each `Point` has:
 
 - **Data**:
   - `x`, `y`, and `z` coordinates
@@ -101,24 +87,22 @@ Suppose you're building an application that performs 3D geometric calculations. 
   - `DisToOrigin()`: Calculates the distance from the origin
   - `Quadrant()`: Determines the spatial quadrant
 
-### 📦 In Traditional OOP:
+### In Traditional OOP:
 
 - A **`class`** defines:
   - The structure (data fields)
   - The behavior (methods)
 - **`Objects`** are instances of a class with actual values
 
-## 🦫 Objects in Go
+## Objects in Go
 
 Go supports OOP concepts but with a simpler approach:
-
-### ✅ Go's Approach:
 
 - **No `class` keyword**
 - Uses **`struct`** to define custom data types
 - Methods can be associated with structs to define behavior
 
-### 🔧 Simplified OOP Model:
+### Simplified OOP Model:
 
 | Feature      | Go Implementation         |
 | ------------ | ------------------------- |
@@ -127,53 +111,44 @@ Go supports OOP concepts but with a simpler approach:
 | Generics     | ❌ Not supported          |
 | Methods      | ✅ Supported with structs |
 
-✅ This makes Go **easy to learn, code, and execute efficiently**—ideal for developers who prefer simplicity over heavy OOP frameworks.
+> This makes Go **easy to learn, code, and execute efficiently**—ideal for developers who prefer simplicity over heavy OOP frameworks.
 
 ---
 
-# ⚙️ Concurrency
+## Concurrency
 
-Modern computing demands handling many tasks efficiently and simultaneously. This section explores the **limits of traditional performance scaling**, the role of **parallelism**, and how **Go simplifies concurrent programming**.
+> Modern computing demands handling many tasks efficiently and simultaneously. This section explores the **limits of traditional performance scaling**, the role of **parallelism**, and how **Go simplifies concurrent programming**.
 
----
-
-## 🚫 Performance Limits
+### Performance Limits
 
 - **Moore's Law**: Number of transistors used to double every 18 months _(now outdated)_.
-- More transistors once meant:
-  - Higher **clock speeds**
-  - Better performance automatically
-- **Current challenge**:
-  - **Power and heat constraints** prevent further clock speed increases.
-  - Chips generate too much heat at high frequencies—limits are reached.
+- More transistors once meant: Higher **clock speeds**, Better performance automatically
+- **Current challenge**: **Power and heat constraints** prevent further clock speed increases and Chips generate too much heat at high frequencies—limits are reached.
 
-## 🤝 Parallelism
+### Parallelism
 
 - While clock speeds have plateaued, the number of **cores per processor is increasing**.
 - Multiple cores = possibility of running **multiple tasks simultaneously**.
 
-### ❗ Challenges in Parallel Programming:
+#### Challenges in Parallel Programming:
 
 - When should **tasks start or stop**?
 - How should **tasks communicate**, especially if one depends on another?
 - Do tasks **conflict in memory**?
 
-## 🧵 Concurrent Programming
+### Concurrent Programming
 
-- **Concurrency** = Managing multiple tasks that are alive at the same time.
-  - They may not run at the same time, but must be **handled together**.
-- Essential for **large, complex systems** where many things happen "at once".
-- **Concurrency enables parallelism**, but:
+- **Concurrency** = Managing multiple tasks that are alive at the same time. They may not run at the same time, but must be **handled together**. Essential for **large, complex systems** where many things happen "at once". **Concurrency enables parallelism**, but:
   - Tasks must be designed to run in parallel.
   - Hardware needs to be available (e.g., multiple cores).
 
-### 🧠 Concurrency Involves:
+#### Concurrency Involves
 
 - Task execution management
 - Communication between tasks
 - Synchronization (e.g., one task must finish before another starts)
 
-## 🚀 Concurrency in Go
+### Concurrency in Go
 
 Go was designed from the ground up for concurrency:
 
@@ -183,45 +158,20 @@ Go was designed from the ground up for concurrency:
 | `Channels`   | Safe communication between goroutines     |
 | `Select`     | Coordination and synchronization of tasks |
 
-✅ **Go makes concurrent programming efficient, readable, and scalable**—ideal for today’s multicore processors.
+> **Go makes concurrent programming efficient, readable, and scalable**—ideal for today’s multicore processors.
 
 ---
 
-# 🛠️ Installing Go (Golang)
-
-This section walks you through how to download and install the **Go programming tools** on your local machine, so you can compile and run your own Go programs.
-
----
-
-## 🌐 Step 1: Visit the Go Website
+## 🛠️ Installing Go (Golang)
 
 - Go to [https://golang.org](https://golang.org)
-- You’ll see the **Go gopher** (mascot of Go).
 - Locate the button: **Download Go** and click it.
-
-> 💡 On the left side of the homepage, there is a yellow box where you can type in and run Go code directly in your browser. We won’t use that—our goal is to run Go **locally** on your machine.
-
-## 📥 Step 2: Choose Your Platform
 
 Once you click **Download Go**, you’ll land on a download page with precompiled versions for:
 
 - ✅ **Windows** – Download the `.msi` installer
 - ✅ **macOS** – Download the `.pkg` file
 - ✅ **Linux** – Follow the tarball installation instructions
-
-You can also download the **source code** if you'd like to build Go from scratch, though that’s not necessary for this course.
-
-> ⚠️ Building from source is possible (Go is open source), but not recommended for beginners—it's complex and unnecessary unless you're modifying the Go compiler itself.
-
-## 🖥️ Step 3: Install Go (Example: Windows)
-
-- Run the downloaded **MSI installer**.
-- Follow the standard installation wizard:
-  - Click **Next** through the steps.
-  - Choose an install location (default is fine).
-  - Complete the installation.
-
-> 💡 If your antivirus software flags the file, approve it to proceed.
 
 After installation:
 
