@@ -2,7 +2,7 @@
 
 ---
 
-## [Leetcode Problem: 416. Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/?envType=daily-question&envId=2025-04-07)
+## 01. [Leetcode Problem: 416. Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/?envType=daily-question&envId=2025-04-07)
 
 **Topics:** Array, Dynamic Programming | **Difficulty:** Medium
 
@@ -63,7 +63,7 @@ func canPartition(nums []int) bool {
 
 ---
 
-## [Leetcode Problem: 3375. Minimum Operations to Make Array Values Equal to K](https://leetcode.com/problems/minimum-operations-to-make-array-values-equal-to-k/?envType=daily-question&envId=2025-04-09)
+## 02. [Leetcode Problem: 3375. Minimum Operations to Make Array Values Equal to K](https://leetcode.com/problems/minimum-operations-to-make-array-values-equal-to-k/?envType=daily-question&envId=2025-04-09)
 
 **Topics:** Array, Hash Table | **Difficulty:** Easy
 
