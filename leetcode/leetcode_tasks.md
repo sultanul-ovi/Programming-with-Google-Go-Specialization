@@ -138,3 +138,149 @@ func minOperations(nums []int, k int) int {
 - **Space Complexity:** `O(n)` — At most `n` unique values stored in a set.
 
 ---
+
+## 03. [Leetcode Problem: 2999. Count the Number of Powerful Integers](https://leetcode.com/problems/count-the-number-of-powerful-integers/description/?envType=daily-question&envId=2025-04-10)
+
+**Topics:** Math, String, Dynamic Programming | **Difficulty:** Hard
+
+
+### Problem Statement
+
+You are given three integers `start`, `finish`, and `limit`, and a string `s` representing a positive integer.
+
+A **positive integer x** is called **powerful** if:
+- `s` is a **suffix** of `x` (i.e., x ends with `s`), and
+- **each digit** in `x` is **at most `limit`**.
+
+Return the total number of powerful integers in the range `[start..finish]`. Return `0` if none exist.
+
+
+**Example 1:**  
+Input: `start = 1`, `finish = 6000`, `limit = 4`, `s = "124"`  
+Output: `5`  
+Explanation: Valid integers: 124, 1124, 2124, 3124, 4124.
+
+**Example 2:**  
+Input: `start = 15`, `finish = 215`, `limit = 6`, `s = "10"`  
+Output: `2`  
+Explanation: Valid integers: 110, 210.
+
+**Example 3:**  
+Input: `start = 1000`, `finish = 2000`, `limit = 4`, `s = "3000"`  
+Output: `0`  
+Explanation: 3000 is beyond the finish boundary.
+
+
+#### Constraints
+- `1 <= start <= finish <= 10^15`
+- `1 <= limit <= 9`
+- `1 <= s.length <= floor(log10(finish)) + 1`
+- `s` only contains numeric digits and each digit `<= limit`
+- `s` does not have leading zeros
+
+
+
+#### Approach
+
+This problem uses **digit dynamic programming**. Key observations:
+
+- Any valid powerful number must be of the form `p * 10^L + S`, where:
+  - `S` is the integer form of suffix `s`
+  - `L = len(s)`
+  - `p` is a prefix (possibly 0)
+
+#### Steps:
+1. **Determine valid range of p**:
+   - Minimum `p`: Smallest value such that `p * M + S >= start`
+   - Maximum `p`: Largest value such that `p * M + S <= finish`
+2. For each `p`, ensure that **all digits of p are ≤ limit**.
+3. Use digit DP (`countValid`) to count numbers `p` in valid range whose digits are all ≤ `limit`
+4. Result = `countValid(p_max) - countValid(p_min - 1)`
+
+
+```go
+func numberOfPowerfulInt(start, finish int64, limit int, s string) int64 {
+    S, _ := strconv.ParseInt(s, 10, 64)
+    L := len(s)
+    M := int64(math.Pow10(L))
+
+    if finish < S {
+        return 0
+    }
+
+    var p_min int64
+    if start <= S {
+        p_min = 0
+    } else {
+        p_min = (start - S + M - 1) / M
+    }
+    p_max := (finish - S) / M
+
+    if p_min > p_max {
+        return 0
+    }
+
+    return countValid(p_max, limit) - countValid(p_min-1, limit)
+}
+
+func countValid(X int64, limit int) int64 {
+    if X < 0 {
+        return 0
+    }
+
+    strX := strconv.FormatInt(X, 10)
+    n := len(strX)
+    digits := make([]int, n)
+    for i, ch := range strX {
+        digits[i] = int(ch - '0')
+    }
+
+    dp := make([][][]int64, n+1)
+    for i := range dp {
+        dp[i] = make([][]int64, 2)
+        for j := 0; j < 2; j++ {
+            dp[i][j] = make([]int64, 2)
+            for k := 0; k < 2; k++ {
+                dp[i][j][k] = -1
+            }
+        }
+    }
+
+    var rec func(pos, tight, started int) int64
+    rec = func(pos, tight, started int) int64 {
+        if pos == n {
+            return 1
+        }
+        if dp[pos][tight][started] != -1 {
+            return dp[pos][tight][started]
+        }
+        var res int64 = 0
+        upper := limit
+        if tight == 1 && digits[pos] < upper {
+            upper = digits[pos]
+        }
+        for d := 0; d <= upper; d++ {
+            if d > limit {
+                break
+            }
+            newTight := 0
+            if tight == 1 && d == digits[pos] {
+                newTight = 1
+            }
+            newStarted := started
+            if started == 0 && d != 0 {
+                newStarted = 1
+            }
+            res += rec(pos+1, newTight, newStarted)
+        }
+        dp[pos][tight][started] = res
+        return res
+    }
+
+    return rec(0, 1, 0)
+}
+```
+- **Time Complexity:** `O(D * limit)` where D is the number of digits in `p_max`
+- **Space Complexity:** `O(D * 2 * 2)` for the DP table
+
+---
