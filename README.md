@@ -38,12 +38,16 @@ This intermediate-level, three-course specialization introduces the **Go (Golang
 
 ## 📝 Practice Problem Set + LeetCode Problems
 
-> I have added 100 practice tasks (with their solutions) relevant to this specialization. | [Course 01 Tasks](Course_01_Getting_Started_with_Go/course_01_tasks.md) | [Course 02 Tasks](Course_02_Functions_Methods_and_Interfaces_in_Go/course_02_tasks.md)
+> I have added 100 practice tasks (with their solutions) relevant to this specialization.
+
+> [Course 01 Tasks](Course_01_Getting_Started_with_Go/course_01_tasks.md) | [Course 02 Tasks](Course_02_Functions_Methods_and_Interfaces_in_Go/course_02_tasks.md)
 
 > I will try to add some leetcode tasks (with their solutions) relevant to this specialization.
 
 ## 💡 Project
+
 > I will try solving a project in Go
+
 ---
 
 ## 📚 Recommended Learning Resources
